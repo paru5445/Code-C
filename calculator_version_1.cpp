@@ -1,38 +1,33 @@
 #include<stdio.h>
 int main()
 {
-	int first_number, second_number,Add,Sub,Mul;
-	char opt, Addition, Subtraction, Multiplication, Divison;
-	double Div;
-	
-printf("enter two numbers for mathematical operation:");
+int first_number, second_number, sum, mul, sub;
+double div;
+printf("Enter any two numbers to perform mathematical operation \n");
 scanf("%d%d",&first_number, &second_number);
-printf("enter the operation to be performed : \n Addition, Subtraction, Multiplication, Divison \n");
-scanf("%s",&opt);
 
-    if (opt == Addition)
-{
-	Add = first_number + second_number;
-	printf("The sum of the two numbers is %d",Add);
-}
-	
-	else if (opt == Subtraction)
-{
-	Sub = first_number - second_number;
-	printf("The subtraction of the two numbers is %d",Sub);
-}
+//operation
+sum = first_number + second_number;
+mul = first_number * second_number;
+sub = first_number - second_number;
 
-    else if (opt == Multiplication)
-{
-	 Mul =	first_number * second_number;
-	 printf("The multiplication of the two numbers is %d",Mul);
-}
+//divison
+if(second_number !=0) 
+   { 
+     div = (double) first_number / second_number; //typecasting
+     printf("the division is %.2lf \n",div); 
+   }
+else
+   {
+	 printf("Here the first number is divided by zero, Error.\n");
+   } 
 
-    else if (opt == Divison)
-{
-	 Div =	first_number / second_number;
-	 printf("The division of the two numbers is %lf",Div);
-}
-	
+//result
+printf("The sum is %d \n",sum);
+printf("The multiplication is %d \n",mul);
+printf("The subtraction is %d \n",sub);
+
+
 return 0;
 }
+
