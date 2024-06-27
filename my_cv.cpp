@@ -4,12 +4,13 @@ int main()
 
 int roll, age;
 char section;
-char name(20);
-char faculty(20);
-char email(20);
+char name[20];
+char faculty[20];
+char email[20];
 
 printf("enter your name:");
-scanf("%s",&name);
+scanf("%[^\n]s",&name); //for space
+//scanf("%s",&name);
 printf("enter your roll:");
 scanf("%d",&roll);
 printf("enter your faculty:");
@@ -21,14 +22,15 @@ scanf("%s",&email);
 printf("enter your section:");
 scanf(" %c",&section);
 
-printf("Name: %s",name);
-printf("Roll:  %d",roll);
-printf("Faculty:  %s",faculty);
-printf("Age: %d",age);
-printf("Email: %s",email);
-printf("Section: %c",section);
+//output
+
+printf("Name: %s \n",name);
+printf("Roll:  %d \n",roll);
+printf("Faculty: %s \n",faculty);
+printf("Age: %d \n",age);
+printf("Email: %s \n",email);
+printf("Section: %c \n",section);
 
 return 0;
 }
-
 
