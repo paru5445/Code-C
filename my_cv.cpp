@@ -34,4 +34,3 @@ printf("Section: %c \n",section);
 return 0;
 }
 
-
